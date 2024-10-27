@@ -1,0 +1,42 @@
+﻿@page "/weather"
+@rendermode InteractiveServer
+
+
+
+<EditForm Model="userOne">
+
+	@if (!_isSubmitted)
+	{
+		<h3>Register a new user</h3>
+		<h4>Fill out your information to be a part of the Website!</h4>
+		<div>
+			<label>First and lastname:</label>
+			<InputText @bind-value=_name />
+		</div>
+		<div>
+			<label>City:</label>
+			<InputText @bind-value=_city />
+		</div>
+		<div>
+			<label>Phonenumber</label>
+			<InputText @bind-value=_phoneNumber />
+		</div>
+		<div>
+			<label>Email:</label>
+			<InputText @bind-value=_email />
+		</div>
+
+		<button @onclick="HandleInput" class="w-20 btn btn-lg btn-primary">Register new user</button>
+	}
+	else
+	{
+	<h4>Now you're one of us. Your registered information is:</h4>
+	<p>Namn: @_name</p>
+	<p>Stad: @_city</p>
+	<p>Telefonnummer: @_phoneNumber</p>
+	<p>Email: @_email</p>
+	}
+</EditForm>
+
+
+

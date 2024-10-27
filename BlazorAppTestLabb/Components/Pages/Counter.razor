@@ -1,0 +1,80 @@
+﻿@page "/counter"
+@rendermode InteractiveServer
+
+
+<PageTitle>Users</PageTitle>
+
+
+@if (_pageIsLoading)
+{
+    <p><em>Loading...Loading...Loading...</em></p>
+}
+else
+{
+    if(!_showingAllUsers)
+    {
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>ID</th>
+                <th>Street</th>
+                <th>ZipCode</th>
+                <th>City</th>
+                <th>Company</th>
+                <th>CathPhrase</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var users in _userList)
+            {
+                <tr>
+                    <td>@users.Name</td>
+                    <td>@users.Email</td>
+                    <td>@users.ID</td>
+                    <td>@users.Street</td>
+                    <td>@users.ZipCode</td>
+                    <td>@users.City</td>
+                    <td>@users.CompanyName</td>
+                    <td>@users.CompanyCatchPhrase</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+        <button class="w-20 btn btn-lg btn-primary" @onclick="ShowAllUsers">Show all users</button>
+    }else
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>ID</th>
+                    <th>Street</th>
+                    <th>ZipCode</th>
+                    <th>City</th>
+                    <th>Company</th>
+                    <th>CathPhrase</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var users in _showAllUsers)
+                {
+                    <tr>
+                        <td>@users.Name</td>
+                        <td>@users.Email</td>
+                        <td>@users.ID</td>
+                        <td>@users.Street</td>
+                        <td>@users.ZipCode</td>
+                        <td>@users.City</td>
+                        <td>@users.CompanyName</td>
+                        <td>@users.CompanyCatchPhrase</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <button class="w-20 btn btn-lg btn-primary" @onclick="ShowTopFiveUsers">Show top five users</button>
+    }
+
+}
