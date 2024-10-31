@@ -1,0 +1,45 @@
+﻿@page "/newUser"
+@rendermode InteractiveServer
+
+
+
+<EditForm Model="userOne" OnSubmit="HandleInput">
+
+	@if (!_isSubmitted)
+	{
+		<h3>Register a new user</h3>
+		<h4>Fill out your information to be a part of the Website!</h4>
+		<div>
+			<label>First and lastname:</label>
+			<input type="text" @bind=_name />
+		</div>
+		<div>
+			<label>City:</label>
+			<input type="text" @bind=_city />
+		</div>
+		<div>
+			<label>Phonenumber</label>
+			<input type="text" @bind=_phoneNumber />
+		</div>
+		<div>
+			<label>Email:</label>
+			<input type="text" @bind=_email />
+		</div>
+
+		<button type="submit" class="w-20 btn btn-lg btn-primary">Register new user</button>
+	}
+	else
+	{
+		<h4>Now you're one of us. Your registered information is:</h4>
+		<p>Namn: @_name</p>
+		<p>Stad: @_city</p>
+		<p>Telefonnummer: @_phoneNumber</p>
+		<p>Email: @_email</p>
+
+	}
+</EditForm>
+
+
+
+
+

@@ -1,8 +1,8 @@
 namespace BlazorAppTestLabb.Components.Pages
 {
-    public partial class Weather
+    public partial class NewUser
     {
-        Counter userOne = new Counter();
+        UsersComponent userOne = new();
         private string? _name;
         private string? _city;
         private string? _phoneNumber;
