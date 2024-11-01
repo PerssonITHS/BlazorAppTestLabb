@@ -27,17 +27,17 @@ else
             </tr>
         </thead>
         <tbody>
-        @foreach (var users in _userList)
+        @foreach (var userItem in _userList)
             {
                 <tr>
-                    <td>@users.Name</td>
-                    <td>@users.Email</td>
-                    <td>@users.ID</td>
-                    <td>@users.Street</td>
-                    <td>@users.ZipCode</td>
-                    <td>@users.City</td>
-                    <td>@users.CompanyName</td>
-                    <td>@users.CompanyCatchPhrase</td>
+                    <td>@userItem.Name</td>
+                    <td>@userItem.Email</td>
+                    <td>@userItem.ID</td>
+                    <td>@userItem.Street</td>
+                    <td>@userItem.ZipCode</td>
+                    <td>@userItem.City</td>
+                    <td>@userItem.CompanyName</td>
+                    <td>@userItem.CompanyCatchPhrase</td>
                 </tr>
             }
         </tbody>

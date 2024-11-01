@@ -4,10 +4,6 @@ namespace BlazorAppTestLabb.Components.Pages
 {
     public partial class UsersComponent
     {
-
-
-
-
         private bool _pageIsLoading = true;
         private bool _showingAllUsers = false;
 
