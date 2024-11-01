@@ -13,9 +13,20 @@ namespace BlazorAppTestLabb.Components.Pages
         private string? _companyCatchPhrase;
 
         private bool _isSubmitted = false;
-        public void HandleInput()
+        public void HandleNewUserInput()
         {
             _isSubmitted = true;
+		}
+
+        private int randomNumber;
+        public void RandomGeneratedNumberID()
+        {
+            Random random = new Random();
+            randomNumber = random.Next(1,101);
         }
-    }
+		protected override void OnInitialized()
+		{
+			RandomGeneratedNumberID();
+		}
+	}
 }
