@@ -13,6 +13,7 @@ else
 {
     if(!_showingAllUsers)
     {
+    <h4>This is our five first users</h4>
     <table class="table">
         <thead>
             <tr>
@@ -42,9 +43,10 @@ else
             }
         </tbody>
     </table>
-        <button class="w-20 btn btn-lg btn-primary" @onclick="ShowAllUsers">Show all users</button>
+        <button class="w-20 btn btn-lg btn-primary" @onclick="ShowAllUsers">Show all of our users</button>
     }else
     {
+        <h4>This is all of our users</h4>
         <table class="table">
             <thead>
                 <tr>
@@ -74,7 +76,7 @@ else
                 }
             </tbody>
         </table>
-        <button class="w-20 btn btn-lg btn-primary" @onclick="ShowTopFiveUsers">Show top five users</button>
+        <button class="w-20 btn btn-lg btn-primary" @onclick="ShowTopFiveUsers">Show our first five users</button>
     }
 
 }
