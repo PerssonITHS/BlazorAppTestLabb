@@ -9,7 +9,7 @@ namespace BlazorAppTestLabb.Components.Pages
 
         private DataAccess? _dataAccess;
         private List<User>? _registeredUsers;
-        public List<User>? _allUsersToShow;
+        private List<User>? _allUsersToShow;
         protected override async Task OnInitializedAsync()
         {
             await Task.Delay(2000);

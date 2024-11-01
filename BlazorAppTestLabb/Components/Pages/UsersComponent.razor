@@ -2,7 +2,7 @@
 @rendermode InteractiveServer
 
 
-<PageTitle>Users</PageTitle>
+<PageTitle>Registered users of the WebSite</PageTitle>
 
 
 @if (_pageIsLoading)
@@ -27,7 +27,7 @@ else
             </tr>
         </thead>
         <tbody>
-        @foreach (var userItem in _userList)
+        @foreach (var userItem in _registeredUsers)
             {
                 <tr>
                     <td>@userItem.Name</td>
