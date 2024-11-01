@@ -5,7 +5,7 @@ namespace BlazorAppTestLabb.Components.Pages
         UsersComponent userOne = new();
         private string? _name;
 		private string? _email;
-		private string? _numberID;
+		private string? _userID;
 		private string? _street;
 		private string? _zipCode;
 		private string? _city;
