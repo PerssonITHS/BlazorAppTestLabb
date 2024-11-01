@@ -4,7 +4,7 @@
     {
         public List<User> GetUsers()
         {
-            List<User> userList = new ()
+            List<User> registeredUsers = new ()
            {
            new User{Name="William Nylander",Email= "william.nylander@hemsidan.se", ID="88",
                              Street = "40 Bay Street",ZipCode = "11451",City= "Toronto", CompanyName= "Toronto Maple Leafs",CompanyCatchPhrase= "Puck on the net!"},
@@ -37,7 +37,7 @@
            new User{Name="Samuel Ersson", Email= "samuel.ersson@hemsidan.se", ID= "33",
                              Street= "3601 South Broad Street", ZipCode="11451", City="Philadelphia", CompanyName= "Philadelphia Flyers", CompanyCatchPhrase="Create your own luck!"}
           };
-            return userList;
+            return registeredUsers;
         }
     }
 }

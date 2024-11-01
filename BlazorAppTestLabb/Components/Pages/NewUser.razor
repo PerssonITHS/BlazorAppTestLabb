@@ -13,16 +13,32 @@
 			<input type="text" @bind=_name />
 		</div>
 		<div>
-			<label>City:</label>
+			<label>Email:</label>
+			<input type="text" @bind=_email />
+		</div>
+		<div>
+			<label>ID</label>
+			<input type="text" @bind=_id />
+		</div>
+		<div>
+			<label>Street:</label>
+			<input type="text" @bind=_street />
+		</div>
+		<div>
+			<label>ZipCode</label>
+			<input type="text" @bind=_zipCode />
+		</div>
+		<div>
+			<label>City</label>
 			<input type="text" @bind=_city />
 		</div>
 		<div>
-			<label>Phonenumber</label>
-			<input type="text" @bind=_phoneNumber />
+			<label>Company</label>
+			<input type="text" @bind=_company />
 		</div>
 		<div>
-			<label>Email:</label>
-			<input type="text" @bind=_email />
+			<label>Your company's catchphrase</label>
+			<input type="text" @bind=_companyCatchPhrase />
 		</div>
 
 		<button type="submit" class="w-20 btn btn-lg btn-primary">Register new user</button>
@@ -31,14 +47,16 @@
 	{
 		<h4>Now you're one of us. Your registered information is:</h4>
 		<p>Namn: @_name</p>
-		<p>Stad: @_city</p>
-		<p>Telefonnummer: @_phoneNumber</p>
 		<p>Email: @_email</p>
+		<p>ID: @_id</p>
+		<p>Street: @_street</p>
+		<p>ZipCode: @_zipCode</p>
+		<p>City: @_city</p>
+		<p>Company: @_company</p>
+		<p>Company Catchphrase: @_companyCatchPhrase</p>
 
 	}
 </EditForm>
-
-
 
 
 

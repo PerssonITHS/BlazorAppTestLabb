@@ -8,14 +8,14 @@ namespace BlazorAppTestLabb.Components.Pages
         private bool _showingAllUsers = false;
 
         private DataAccess? _dataAccess;
-        private List<User>? _userList;
+        private List<User>? _registeredUsers;
         public List<User>? _allUsersToShow;
         protected override async Task OnInitializedAsync()
         {
             await Task.Delay(2000);
             _pageIsLoading = false;
             _dataAccess = new DataAccess();
-            _userList = _dataAccess.GetUsers().OrderBy(x => x.Name).ToList().GetRange(0, 5).ToList();
+            _registeredUsers = _dataAccess.GetUsers().OrderBy(x => x.Name).ToList().GetRange(0, 5).ToList();
             _allUsersToShow = _dataAccess.GetUsers().OrderBy(x => Random.Shared.Next()).ToList();
         }
 
